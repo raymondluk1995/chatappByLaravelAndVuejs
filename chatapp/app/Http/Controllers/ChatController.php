@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 class ChatController extends Controller
 {
-    public function rooms(Request $request){
+    public function rooms(Request $request){   
+        console.log("Trying to get rooms now\n");
         return ChatRoom::all();
     }
 
@@ -20,7 +21,7 @@ class ChatController extends Controller
                 ->get();
     }
 
-    public function newMessage(Request $requst, $roomId){
+    public function newMessage(Request $request, $roomId){
         $newMessage = new ChatMessage;
         $newMessage->user_id = Auth::id();
         $newMessage->chat_room_id = $roomId;

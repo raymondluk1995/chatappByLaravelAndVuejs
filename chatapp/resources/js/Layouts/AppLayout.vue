@@ -146,6 +146,9 @@
                         <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
                         </jet-responsive-nav-link>
+                    </div>
+
+                    <div class="pt-2 pb-3 space-y-1">
                         <jet-responsive-nav-link :href="route('chat')" :active="route().current('chat')">
                             Chat
                         </jet-responsive-nav-link>

@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Auth;
 class ChatController extends Controller
 {
     public function rooms(Request $request){   
-        console.log("Trying to get rooms now\n");
         return ChatRoom::all();
     }
 
